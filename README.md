@@ -8,3 +8,9 @@ The Frontend of St.Pavlov Data panel.
 Built with [Reack.js](https://react.dev/) [Next.js](https://nextjs.org/)
 
 </div>
+
+## Getting started
+
+```bash
+npm run build
+```
