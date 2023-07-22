@@ -1,13 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        remotePatterns: [
-            {
-                protocol: "https",
-                hostname: "s3api.wanz.site",
-            }
-        ]
-    }
+  output: "export", 
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "s3api.wanz.site",
+      }
+    ]
+  }
 }
 
 module.exports = nextConfig
