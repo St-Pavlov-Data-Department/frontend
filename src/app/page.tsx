@@ -2,7 +2,7 @@
 
 import { FixedHeader } from '@/components/fixed_header'
 import { ItemDisplayList } from '@/components/item_list'
-import Router from '@/app/app_router'
+import Router from '@/app/router'
 
 import Image from 'next/image'
 import { Suspense, useEffect, useState, useTransition } from 'react'
