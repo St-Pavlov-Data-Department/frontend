@@ -12,7 +12,7 @@ export function FixedHeader() {
       <div className="button bg-orange-300 hover:bg-orange-200 text-white font-bold py-2 px-4 rounded-2xl shadow-lg">
         <a
           className="flex place-items-center lg:pointer-events-auto lg:p-0"
-          href="https://stpavlov-data.com/api/doc"
+          href="https://backend.stpavlov-data.com/api/doc"
           target="_blank"
           rel="noopener noreferrer"
         >
