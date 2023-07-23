@@ -1,17 +1,20 @@
 "use client"
 
 import PavlovItemsPage from "@/components/pages/item_list_page"
-import { useState, useTransition } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import PavlovItemDetailPage from "@/components/pages/item_detail_page"
 import { FixedHeader } from "@/components/fixed_header"
-import ItemDetail from "@/components/pages/[item_id]"
 
 export default function Router() {
 
   return (
     <main>
       <FixedHeader data-fixed-header />
+      <div style={{
+        // TODO: dynamically calculate and update padding
+        paddingTop: "100px",
+      }}
+      />
 
       <BrowserRouter>
         <Routes>
