@@ -2,9 +2,7 @@ import { ItemDisplayList } from '@/components/item_list'
 
 import Image from 'next/image'
 
-export default function PavlovItemsPage(
-  { navigate }: { navigate: (url: string) => void }
-) {
+export default function PavlovItemsPage() {
 
   return (
     <div className="flex min-h-screen flex-col items-center">
@@ -21,7 +19,7 @@ export default function PavlovItemsPage(
 
       <ConstructingNote />
 
-      <ItemDisplayList navigate={navigate} />
+      <ItemDisplayList />
 
     </div>
   )

@@ -82,7 +82,7 @@ const rareToColorMap: { [level: number]: string } = {
 }
 
 function ItemDisplay(
-  { itemInfo, navigate }: { itemInfo: ItemInfo, navigate: (url: string) => void },
+  { itemInfo }: { itemInfo: ItemInfo },
 ) {
   return (
     <div
@@ -104,7 +104,7 @@ function ItemDisplay(
           zIndex: 0,
         }}
         decoding="async"
-        onClick={() => navigate(`/item/${itemInfo.id}`)}
+        // onClick={() => navigate(`/item/${itemInfo.id}`)}
       />
       <div style={{
         position: "absolute",
@@ -123,11 +123,9 @@ function ItemDisplay(
   )
 }
 
-export function ItemDisplayList(
-  { navigate }: { navigate: (url: string) => void }
-) {
+export function ItemDisplayList() {
   const items = itemInfoList.map((itemInfo) =>
-    <ItemDisplay itemInfo={itemInfo} navigate={navigate} />
+    <ItemDisplay itemInfo={itemInfo} />
   )
 
   return (
