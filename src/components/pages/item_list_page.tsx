@@ -1,3 +1,5 @@
+"use client"
+
 import { ItemDisplayList } from '@/components/item_list'
 
 import Image from 'next/image'

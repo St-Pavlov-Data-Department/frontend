@@ -9,7 +9,7 @@ export default function Router() {
 
   return (
     <main>
-      <FixedHeader data-fixed-header />
+      <FixedHeader />
       <div style={{
         // TODO: dynamically calculate and update padding
         paddingTop: "100px",
