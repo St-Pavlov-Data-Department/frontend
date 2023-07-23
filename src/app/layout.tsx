@@ -9,13 +9,15 @@ export const metadata: Metadata = {
   description: 'St.Pavlov Data Department is a non-profit organization, which collects item drop data for mobile game Reverse:1999 and analizes statistical results.',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout(
+  { children }: { children: React.ReactNode }
+) {
   return (
     <html lang="en">
+      <head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </head>
+
       <body className={inter.className}>{children}</body>
     </html>
   )

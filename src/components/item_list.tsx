@@ -1,3 +1,7 @@
+"use client"
+
+import { Link } from "react-router-dom"
+
 
 class ItemInfo {
   id: number
@@ -82,7 +86,7 @@ const rareToColorMap: { [level: number]: string } = {
 }
 
 function ItemDisplay(
-  { itemInfo, navigate }: { itemInfo: ItemInfo, navigate: (url: string) => void },
+  { itemInfo }: { itemInfo: ItemInfo },
 ) {
   return (
     <div
@@ -94,18 +98,20 @@ function ItemDisplay(
         border: `1px solid ${rareToColorMap[itemInfo.rare]}`,
       }}
     >
-      <img
-        alt={itemInfo.name}
-        src={itemInfo.image_url}
-        width="100"
-        height="100"
-        style={{
-          objectFit: "cover",
-          zIndex: 0,
-        }}
-        decoding="async"
-        onClick={() => navigate(`/item/${itemInfo.id}`)}
-      />
+      <Link to={`/item/${itemInfo.id}`}>
+        <img
+          alt={itemInfo.name}
+          src={itemInfo.image_url}
+          width="100"
+          height="100"
+          style={{
+            objectFit: "cover",
+            zIndex: 0,
+          }}
+          decoding="async"
+        // onClick={() => navigate(`/item/${itemInfo.id}`)}
+        />
+      </Link>
       <div style={{
         position: "absolute",
         bottom: 0,
@@ -123,11 +129,9 @@ function ItemDisplay(
   )
 }
 
-export function ItemDisplayList(
-  { navigate }: { navigate: (url: string) => void }
-) {
+export function ItemDisplayList() {
   const items = itemInfoList.map((itemInfo) =>
-    <ItemDisplay itemInfo={itemInfo} navigate={navigate} />
+    <ItemDisplay itemInfo={itemInfo} />
   )
 
   return (
