@@ -1,4 +1,4 @@
-import { useParams } from "next/navigation"
+import { useParams } from "react-router-dom"
 
 
 export default function PavlovItemDetailPage() {

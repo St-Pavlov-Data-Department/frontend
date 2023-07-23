@@ -1,4 +1,7 @@
 
+import { Link } from "react-router-dom"
+
+
 class ItemInfo {
   id: number
   name: string
@@ -94,18 +97,20 @@ function ItemDisplay(
         border: `1px solid ${rareToColorMap[itemInfo.rare]}`,
       }}
     >
-      <img
-        alt={itemInfo.name}
-        src={itemInfo.image_url}
-        width="100"
-        height="100"
-        style={{
-          objectFit: "cover",
-          zIndex: 0,
-        }}
-        decoding="async"
+      <Link to={`/item/${itemInfo.id}`}>
+        <img
+          alt={itemInfo.name}
+          src={itemInfo.image_url}
+          width="100"
+          height="100"
+          style={{
+            objectFit: "cover",
+            zIndex: 0,
+          }}
+          decoding="async"
         // onClick={() => navigate(`/item/${itemInfo.id}`)}
-      />
+        />
+      </Link>
       <div style={{
         position: "absolute",
         bottom: 0,
