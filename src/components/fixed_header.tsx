@@ -1,4 +1,3 @@
-
 export function FixedHeader() {
   return (
     <div className="flex fixed top-0 left-0 right-0 w-full justify-between items-center bg-gray-900 bg-opacity-50 text-white backdrop-blur-8 px-5 py-2 font-sans text-center lg:flex"
