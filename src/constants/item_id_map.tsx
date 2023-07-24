@@ -1,4 +1,4 @@
-
+'use client'
 
 function githubImageUrl(id: number) {
   return `https://raw.githubusercontent.com/yuanyan3060/1999GameResource/main/Item/${id}.png`
@@ -72,3 +72,18 @@ export const itemInfoList: ItemInfo[] = [
 ]
 
 itemInfoList.sort((x, y) => y.rare - x.rare) 
+
+export const itemIdMap = itemInfoList.reduce(
+  (map:{[id:number]:ItemInfo}, item) => {
+    map[item.id] = item
+    return map
+  }, {}
+)
+
+export const rareToColorMap: { [level: number]: string } = {
+  1: "#405939",
+  2: "#4A5272",
+  3: "#A27FA9",
+  4: "#D6BB6E",
+  5: "#DE9423",
+}

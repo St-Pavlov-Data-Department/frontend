@@ -10,9 +10,12 @@ RUN npm run build
 RUN ls
 
 # PACK stage
-FROM nginx:stable-alpine as PACK_STAGE
-COPY --from=BUILD_STAGE /StPavlovFrontend/out /usr/share/nginx/html
+FROM node:20-slim as PACK_STAGE
+WORKDIR /StPavlovFrontend
+COPY --from=BUILD_STAGE /StPavlovFrontend/.next /StPavlovFrontend/.next
+COPY --from=BUILD_STAGE /StPavlovFrontend/package.json /StPavlovFrontend/package.json
+COPY --from=BUILD_STAGE /StPavlovFrontend/node_modules /StPavlovFrontend/node_modules
 
-EXPOSE 80
+EXPOSE 3000
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "run", "start"]

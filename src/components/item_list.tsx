@@ -1,15 +1,9 @@
 "use client"
 
-import { Link } from "react-router-dom"
-import { itemInfoList, ItemInfo } from "@/constants/item_id_map" 
+import Link from "next/link"
 
-const rareToColorMap: { [level: number]: string } = {
-  1: "#405939",
-  2: "#4A5272",
-  3: "#A27FA9",
-  4: "#D6BB6E",
-  5: "#DE9423",
-}
+import { itemInfoList, ItemInfo } from "@/constants/item_id_map"
+import { rareToColorMap } from '@/constants/item_id_map'
 
 function ItemDisplay(
   { itemInfo }: { itemInfo: ItemInfo },
@@ -24,7 +18,7 @@ function ItemDisplay(
         border: `1px solid ${rareToColorMap[itemInfo.rare]}`,
       }}
     >
-      <Link to={`/item/${itemInfo.id}`}>
+      <Link href={`/item/${itemInfo.id}`}>
         <img
           alt={itemInfo.name}
           src={itemInfo.image_url}
@@ -57,7 +51,7 @@ function ItemDisplay(
 
 export function ItemDisplayList() {
   const items = itemInfoList.map((itemInfo) =>
-    <ItemDisplay itemInfo={itemInfo} />
+    <ItemDisplay itemInfo={itemInfo} key={itemInfo.id}/>
   )
 
   return (
