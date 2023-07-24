@@ -19,7 +19,7 @@ function ItemDisplay(
         border: `1px solid ${rareToColorMap[itemInfo.rare]}`,
       }}
     >
-      <Link href={`/item/${itemInfo.id}`} prefetch={true}>
+      <Link href={`/item/${itemInfo.id}`} >
         <Image
           alt={itemInfo.name}
           src={itemInfo.image_url}

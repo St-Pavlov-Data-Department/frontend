@@ -18,7 +18,7 @@ export default async function Page(
 
   const matrixElements = response.data.map((d: Matrix) => (
     <div
-      className="flex items-start justify-between"
+      className="flex items-center justify-between"
       style={{
         width: "80%",
         border: "1px solid #000000"
@@ -34,10 +34,10 @@ export default async function Page(
   ))
 
   return (
-    <div className="w-full flex flex-col justify-center">
+    <div className="w-full flex flex-col items-center">
       <h1>{itemIdMap[params.item_id]?.name}</h1>
       item id: {params.item_id}
-      <div className="flex flex-col justify-center">
+      <div className="w-full flex flex-col items-center">
         {matrixElements.length > 0 ?
           matrixElements
           : <h1>No data</h1>}
