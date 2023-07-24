@@ -1,3 +1,4 @@
+import { FixedHeader } from '@/components/fixed_header'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -14,11 +15,9 @@ export default function RootLayout(
 ) {
   return (
     <html lang="en">
-      <head>
-        <link rel="shortcut icon" href="/favicon.ico" />
-      </head>
+      <FixedHeader />
 
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className} style={{paddingTop: 100}} >{children}</body>
     </html>
   )
 }
