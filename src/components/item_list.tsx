@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 
 import { itemInfoList, ItemInfo } from "@/constants/item_id_map"
@@ -18,8 +19,8 @@ function ItemDisplay(
         border: `1px solid ${rareToColorMap[itemInfo.rare]}`,
       }}
     >
-      <Link href={`/item/${itemInfo.id}`}>
-        <img
+      <Link href={`/item/${itemInfo.id}`} prefetch={true}>
+        <Image
           alt={itemInfo.name}
           src={itemInfo.image_url}
           width="100"
@@ -28,7 +29,6 @@ function ItemDisplay(
             objectFit: "cover",
             zIndex: 0,
           }}
-          decoding="async"
         // onClick={() => navigate(`/item/${itemInfo.id}`)}
         />
       </Link>
@@ -51,7 +51,7 @@ function ItemDisplay(
 
 export function ItemDisplayList() {
   const items = itemInfoList.map((itemInfo) =>
-    <ItemDisplay itemInfo={itemInfo} key={itemInfo.id}/>
+    <ItemDisplay itemInfo={itemInfo} key={itemInfo.id} />
   )
 
   return (

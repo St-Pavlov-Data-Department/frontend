@@ -1,5 +1,3 @@
-'use client'
-
 function githubImageUrl(id: number) {
   return `https://raw.githubusercontent.com/yuanyan3060/1999GameResource/main/Item/${id}.png`
 }

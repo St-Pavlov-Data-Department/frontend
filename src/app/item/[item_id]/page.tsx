@@ -1,5 +1,3 @@
-'use client'
-
 import { episodeIdMap } from "@/constants/episode_id_map"
 import { itemIdMap } from "@/constants/item_id_map"
 import { getMatrixes } from "./get_matrixes"
