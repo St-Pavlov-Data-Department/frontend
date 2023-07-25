@@ -4,7 +4,7 @@ FROM node:20 as BUILD_STAGE
 WORKDIR /StPavlovFrontend
 COPY . .
 
-RUN npm install
+RUN npm install --omit optional --omit dev
 RUN npm run build
 
 RUN ls
