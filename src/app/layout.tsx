@@ -21,12 +21,15 @@ export default function RootLayout(
         {/* font for github icon */}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
       </head>
-      <body className={inter.className} style={{ paddingTop: 100 }} >
-        <div className="h-screen flex flex-row justify-start">
+      <body className={inter.className} >
+        <FixedHeader />
+        <div className="h-screen flex flex-row justify-start"
+          style={{ 
+            paddingTop: 100,
+          }}
+        >
           <SideBar />
-          <div className="w-full flex">
-            <FixedHeader />
-
+          <div className="w-full">
             {children}
           </div>
         </div>

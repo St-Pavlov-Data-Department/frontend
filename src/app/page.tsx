@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Page() {
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full max-h-screen flex flex-col items-center">
 
       <div className="flex place-items-center">
         <Image
