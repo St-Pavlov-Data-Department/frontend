@@ -1,5 +1,6 @@
-function githubImageUrl(id: number) {
-  return `https://raw.githubusercontent.com/yuanyan3060/1999GameResource/main/Item/${id}.png`
+function itemImageURL(id: number) {
+  // return `https://raw.githubusercontent.com/yuanyan3060/1999GameResource/main/Item/${id}.png`
+  return `https://s3api.wanz.site/1999-game-resource/Item/${id}.png`
 }
 
 export class ItemInfo {
@@ -17,7 +18,7 @@ export class ItemInfo {
     this.name = name
     this.rare = rare
 
-    this.image_url = githubImageUrl(id)
+    this.image_url = itemImageURL(id)
   }
 }
 

@@ -63,7 +63,8 @@ export function SideBar() {
         transition: "width 500ms cubic-bezier(0.2, 0, 0, 1) 0s",
         color: "#ffffff",
         textShadow: "1px 2px 4px rgba(0, 0, 0, 0.6)",
-        backgroundImage: `url("https://raw.githubusercontent.com/yuanyan3060/1999GameResource/main/Portrait/302502.png")`,
+        // backgroundImage: `url("https://raw.githubusercontent.com/yuanyan3060/1999GameResource/main/Portrait/302502.png")`,
+        backgroundImage: `url("https://s3api.wanz.site/1999-game-resource/Portrait/302502.png")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
